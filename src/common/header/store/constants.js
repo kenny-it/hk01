@@ -1,0 +1,1 @@
+export const CHANGE_SHOW_MORE_DISPLAY = 'change_show_more_display'
