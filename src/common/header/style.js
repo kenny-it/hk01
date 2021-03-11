@@ -4,6 +4,7 @@ export const HeaderWrapper = styled.div`
     position: fixed;
     width: 100%;
     height: 60px;
+    z-index: 200;
     user-select: none;
     background: rgb(255,255,255);
     color: rgba(0,0,0,0.78);

@@ -1,14 +1,14 @@
 import React, { Fragment } from 'react'
 import Header from './common/header'
 import { Switch, Route } from 'react-router-dom'
+import Home from './pages/home'
 
 function App() {
   return (
     <Fragment>
         <Header />
         <Switch>
-            <Route path="/home" exact>
-              <div>Home</div>
+            <Route path="/" component={Home}>
             </Route>
         </Switch>
     </Fragment>
