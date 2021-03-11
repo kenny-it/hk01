@@ -167,6 +167,9 @@ export const CustomerArea = styled.div`
         margin: 0 3px;
         padding: 0 6px;
         cursor: pointer;
+        a,a:hover,a:active,a:visited,a:link,a:focus{
+           color: rgba(0,0,0,0.78);
+        }
         &:nth-child(2) {
             padding: 4px 9px;
             border-left: 1px solid #ccc;
@@ -175,19 +178,31 @@ export const CustomerArea = styled.div`
         .iconfont {
             margin-right: 5px;
             font-size: 22px;
+            &.active {
+                color: rgb(31, 76, 235);
+            }
         }
     }
 `
 export const SearchBox = styled.div`
     position: absolute;
-    top: 42px;
-    left: 0;
+    top: 45px;
+    left: -116px;
     font-size: 12px;
     padding: 18px;
     background-color: rgb(255, 255, 255);
     box-shadow: rgb(0 33 155 / 12%) 0px 0px 6px 2px;
     border-radius: 4px;
     background-color: #FFFFFF;
+    &::after {
+        position: absolute;
+        top: -16px;
+        left: 125px;
+        content: "";
+        display: block;
+        border: 8px solid transparent;
+        border-bottom-color: #fff;
+    }
     h1 {
         margin-bottom: 13px;
         color: #1745EF;
@@ -212,4 +227,7 @@ export const SearchInput = styled.input`
     border-radius: 6px;
     outline: none;
     font-size: 13px;
+    &:focus {
+        border-color: rgb(23, 69, 239);
+    }
 `

@@ -19,7 +19,7 @@ import {
 
 class Header extends Component {
     render() {
-        const { showMore, handleMoreDisplay } = this.props
+        const { showMore,showSearchBox, handleMoreDisplay, handleBoxDisplay } = this.props
         return (
             <HeaderWrapper>
                 <HeaderCenter>
@@ -183,52 +183,67 @@ class Header extends Component {
                     </MorePanel>
                     <CustomerArea>
                         <div>
-                            <i className="iconfont">&#xe624;</i>
-                            <SearchBox>
-                                <SearchInput placeholder="搜索香港01"/>
-                                <div>
-                                    <h1>熱門搜尋：</h1>
-                                    <div>
-                                        <a href="/">新冠肺炎</a>
-                                        <a href="/">新冠疫苗</a>
-                                        <a href="/">港版國安法</a>
-                                        <a href="/">2021財政預算案</a>
-                                        <a href="/">安心出行app</a>
-                                        <a href="/">强制檢測</a>
-                                        <a href="/">BNO 英國國民（海外）護照</a>
-                                        <a href="/">梅根</a>
-                                        <a href="/">袁國勇</a>
-                                        <a href="/">半島城邦</a>
-                                    </div>
-                                </div>
-                            </SearchBox>
+                            <i className={showSearchBox ? 'iconfont active' : 'iconfont'} onClick={() => {handleBoxDisplay()}}>&#xe624;</i>
+                            {this.getSearchBox(showSearchBox, handleBoxDisplay)}
                         </div>
                         <div>
                         <i className="iconfont">&#xe636;</i>
                         服務
                         </div>
                         <div>
-                        <i className="iconfont">&#xe685;</i>
-                        登入
+                        <Link to="/login">
+                            <i className="iconfont">&#xe685;</i>
+                            登入
+                        </Link>
                         </div>
                     </CustomerArea>
                 </HeaderCenter>
             </HeaderWrapper>
         )
     }
+
+    getSearchBox(showFlag, handleBoxDisplay) {
+        if (showFlag) {
+            return (
+                <SearchBox onMouseLeave={()=> {handleBoxDisplay(false)}}>
+                    <SearchInput placeholder="搜索香港01"/>
+                    <div>
+                        <h1>熱門搜尋：</h1>
+                        <div>
+                            <a href="/">新冠肺炎</a>
+                            <a href="/">新冠疫苗</a>
+                            <a href="/">港版國安法</a>
+                            <a href="/">2021財政預算案</a>
+                            <a href="/">安心出行app</a>
+                            <a href="/">强制檢測</a>
+                            <a href="/">BNO 英國國民（海外）護照</a>
+                            <a href="/">梅根</a>
+                            <a href="/">袁國勇</a>
+                            <a href="/">半島城邦</a>
+                        </div>
+                    </div>
+                </SearchBox>
+)
+        } else {
+            return ''
+        }
+    }
 }
 
 const mapState = state => {
     return {
-        showMore: state.getIn(['header', 'showMore'])
+        showMore: state.getIn(['header', 'showMore']),
+        showSearchBox: state.getIn(['header', 'showSearchBox'])
     }
 }
 
 const mapDispatch = dispatch => {
     return {
         handleMoreDisplay(flag) {
-            const action = actionCreator.getMoreAction(flag ? flag : '')
-            dispatch(action)
+            dispatch(actionCreator.getMoreAction(flag ? flag : ''))
+        },
+        handleBoxDisplay(flag) {
+            dispatch(actionCreator.getSearchBoxAction(flag ? flag : ''))
         }
     }
 }

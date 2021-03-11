@@ -47,4 +47,7 @@ table {
 a {
 	text-decoration: none;
 }
+a,a:hover,a:active,a:visited,a:link,a:focus{
+	color: rgba(0,0,0,0.78);
+ }
 `

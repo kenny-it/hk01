@@ -6,3 +6,9 @@ export const getMoreAction = flag => {
         flag
     }
 }
+export const getSearchBoxAction = flag => {
+    return {
+        type: constants.CHANGE_SEARCH_BOX_DISPLAY,
+        flag
+    }
+}

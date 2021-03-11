@@ -1,1 +1,3 @@
 export const CHANGE_SHOW_MORE_DISPLAY = 'change_show_more_display'
+
+export const CHANGE_SEARCH_BOX_DISPLAY = 'change_search_box_display'

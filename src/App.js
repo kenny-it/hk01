@@ -4,7 +4,8 @@ import store from './store'
 import GlobalStyle from './GlobalStyle'
 import Iconfont from './static/iconfont'
 import Header from './common/header'
-import { BrowserRouter } from 'react-router-dom'
+import Login from './pages/login'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
 function App() {
   return (
@@ -13,7 +14,14 @@ function App() {
       <Iconfont />
       <BrowserRouter>
         <Provider store={store}>
-          <Header />
+          <Switch>
+            <Route path="/" exact>
+              <Header />
+            </Route>
+            <Route path="/login">
+              <Login />
+            </Route>
+          </Switch>
         </Provider>
       </BrowserRouter>
     </Fragment>
