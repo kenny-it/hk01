@@ -1,0 +1,351 @@
+{
+    "status": "success",
+    "data": [
+        {
+            "id": 1,
+            "title": "港聞",
+            "list": [
+                {
+                    "channel": "001",
+                    "subclass": "社會新聞"
+                },
+                {
+                    "channel": "002",
+                    "subclass": "突發"
+                },
+                {
+                    "channel": "003",
+                    "subclass": "01偵查"
+                },
+                {
+                    "channel": "004",
+                    "subclass": "政情"
+                },
+                {
+                    "channel": "005",
+                    "subclass": "香港經濟"
+                },
+                {
+                    "channel": "006",
+                    "subclass": "天氣"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "title": "娛樂",
+            "list": [
+                {
+                    "channel": "001",
+                    "subclass": "即時娛樂"
+                },
+                {
+                    "channel": "002",
+                    "subclass": "電影"
+                },
+                {
+                    "channel": "003",
+                    "subclass": "眾樂迷"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "title": "生活",
+            "list": [
+                {
+                    "channel": "001",
+                    "subclass": "健康"
+                },
+                {
+                    "channel": "002",
+                    "subclass": "教煮"
+                },
+                {
+                    "channel": "003",
+                    "subclass": "親子"
+                },
+                {
+                    "channel": "004",
+                    "subclass": "寵物"
+                },
+                {
+                    "channel": "004",
+                    "subclass": "職場"
+                },
+                {
+                    "channel": "005",
+                    "subclass": "好生活"
+                },
+                {
+                    "channel": "006",
+                    "subclass": "網購攻略"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "title": "觀點",
+            "list": [
+                {
+                    "channel": "001",
+                    "subclass": "經濟高峰論壇"
+                },
+                {
+                    "channel": "002",
+                    "subclass": "社論"
+                },
+                {
+                    "channel": "003",
+                    "subclass": "01觀點"
+                },
+                {
+                    "channel": "004",
+                    "subclass": "周報"
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "title": "國際",
+            "list": [
+                {
+                    "channel": "001",
+                    "subclass": "即時國際"
+                },
+                {
+                    "channel": "002",
+                    "subclass": "環球趣聞"
+                },
+                {
+                    "channel": "003",
+                    "subclass": "國際分析"
+                },
+                {
+                    "channel": "004",
+                    "subclass": "世界專題"
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "title": "經濟",
+            "list": [
+                {
+                    "channel": "001",
+                    "subclass": "經濟高峰論壇"
+                },
+                {
+                    "channel": "002",
+                    "subclass": "財經快訊"
+                },
+                {
+                    "channel": "003",
+                    "subclass": "宏觀解讀"
+                },
+                {
+                    "channel": "004",
+                    "subclass": "地產樓市"
+                },
+                {
+                    "channel": "005",
+                    "subclass": "專題人訪"
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "title": "體育",
+            "list": [
+                {
+                    "channel": "001",
+                    "subclass": "即時體育"
+                },
+                {
+                    "channel": "002",
+                    "subclass": "跑步"
+                },
+                {
+                    "channel": "003",
+                    "subclass": "Jumper"
+                },
+                {
+                    "channel": "004",
+                    "subclass": "武備志"
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "title": "女生",
+            "list": [
+                {
+                    "channel": "001",
+                    "subclass": "知性女生"
+                },
+                {
+                    "channel": "002",
+                    "subclass": "穿搭筆記"
+                },
+                {
+                    "channel": "003",
+                    "subclass": "談情說性"
+                },
+                {
+                    "channel": "004",
+                    "subclass": "美容手帳"
+                }
+            ]
+        },
+        {
+            "id": 9,
+            "title": "科技玩物",
+            "list": [
+                {
+                    "channel": "001",
+                    "subclass": "實用教學"
+                },
+                {
+                    "channel": "002",
+                    "subclass": "數碼生活"
+                },
+                {
+                    "channel": "003",
+                    "subclass": "遊戲動漫"
+                }
+            ]
+        },
+        {
+            "id": 10,
+            "title": "熱話",
+            "list": [
+                {
+                    "channel": "001",
+                    "subclass": "熱話"
+                },
+                {
+                    "channel": "002",
+                    "subclass": "開罐"
+                },
+                {
+                    "channel": "003",
+                    "subclass": "研數所"
+                }
+            ]
+        },
+        {
+            "id": 11,
+            "title": "社區",
+            "list": [
+                {
+                    "channel": "001",
+                    "subclass": "社區專題"
+                },
+                {
+                    "channel": "002",
+                    "subclass": "18區新聞"
+                },
+                {
+                    "channel": "003",
+                    "subclass": "隱形香港"
+                },
+                {
+                    "channel": "004",
+                    "subclass": "社區伙伴"
+                }
+            ]
+        },
+        {
+            "id": 12,
+            "title": "好食玩飛",
+            "list": [
+                {
+                    "channel": "001",
+                    "subclass": "食玩買"
+                },
+                {
+                    "channel": "002",
+                    "subclass": "旅遊"
+                }
+            ]
+        },
+        {
+            "id": 13,
+            "title": "中國",
+            "list": [
+                {
+                    "channel": "001",
+                    "subclass": "即時中國"
+                },
+                {
+                    "channel": "002",
+                    "subclass": "大國小事"
+                },
+                {
+                    "channel": "003",
+                    "subclass": "藝文中國"
+                },
+                {
+                    "channel": "004",
+                    "subclass": "中國觀察"
+                },
+                {
+                    "channel": "005",
+                    "subclass": "台灣新聞"
+                }
+            ]
+        },
+        {
+            "id": 14,
+            "title": "藝文格物",
+            "list": [
+                {
+                    "channel": "001",
+                    "subclass": "一物"
+                },
+                {
+                    "channel": "002",
+                    "subclass": "形而"
+                },
+                {
+                    "channel": "003",
+                    "subclass": "藝文"
+                },
+                {
+                    "channel": "004",
+                    "subclass": "哲學"
+                },
+                {
+                    "channel": "005",
+                    "subclass": "第二身"
+                },
+                {
+                    "channel": "006",
+                    "subclass": "扭耳仔"
+                }
+            ]
+        },
+        {
+            "id": 15,
+            "title": "影像",
+            "list": [
+                {
+                    "channel": "001",
+                    "subclass": "紀實"
+                },
+                {
+                    "channel": "002",
+                    "subclass": "動感"
+                },
+                {
+                    "channel": "003",
+                    "subclass": "影像熱話"
+                },
+                {
+                    "channel": "004",
+                    "subclass": "攝影界"
+                }
+            ]
+        }
+    ]
+}
