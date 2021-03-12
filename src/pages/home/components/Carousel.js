@@ -24,7 +24,7 @@ const slideConfig = {
     autoplay: {delay: 6000},
     onSlideChange: swiper => {
         if (swiperVertical) {
-            swiperVertical.slideTo(swiper.activeIndex - 1)
+            swiperVertical.slideTo(swiper.activeIndex - 1, 800)
         }
     }
 }
