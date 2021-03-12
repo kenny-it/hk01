@@ -19,7 +19,7 @@ import {
 
 class Header extends Component {
     render() {
-        const { showMore,showSearchBox, handleMoreDisplay, handleBoxDisplay } = this.props
+        const { showMore, titles, showSearchBox, handleMoreDisplay, handleBoxDisplay } = this.props
         return (
             <HeaderWrapper>
                 <HeaderCenter>
@@ -30,19 +30,7 @@ class Header extends Component {
                     </LogoArea>
                     <NavArea>
                         <ul>
-                            <li>港聞</li>
-                            <li>娛樂</li>
-                            <li>生活</li>
-                            <li>觀點</li>
-                            <li>國際</li>
-                            <li>經濟</li>
-                            <li>體育</li>
-                            <li>女生</li>
-                            <li>科技玩物</li>
-                            <li>熱話</li>
-                            <li>社區</li>
-                            <li>好食玩飛</li>
-                            <li>中國</li>
+                            {this.getHeaderTitle(titles)}
                         </ul>
                         <NavMore>
                             <span onClick={()=> {handleMoreDisplay()}}>更多<i className={showMore ? 'active' : ''}></i></span>
@@ -51,105 +39,7 @@ class Header extends Component {
                     <MorePanel className={showMore ? 'panel-active' : ''} onMouseLeave={()=> {handleMoreDisplay(false)}}>
                         <MoreContent>
                             <div>
-                                <dl>
-                                    <dt>港聞</dt>
-                                    <dd>社會新聞</dd>
-                                    <dd>突發</dd>
-                                    <dd>01偵察</dd>
-                                    <dd>政情</dd>
-                                    <dd>香港經濟</dd>
-                                    <dd>天氣</dd>
-                                </dl>
-                                <dl>
-                                    <dt>港聞</dt>
-                                    <dd>社會新聞社會新聞</dd>
-                                    <dd>突發</dd>
-                                    <dd>01偵察</dd>
-                                    <dd>政情</dd>
-                                    <dd>香港經濟</dd>
-                                    <dd>天氣</dd>
-                                </dl>
-                                <dl>
-                                    <dt>港聞</dt>
-                                    <dd>社會新聞</dd>
-                                    <dd>突發</dd>
-                                    <dd>01偵察</dd>
-                                    <dd>政情</dd>
-                                    <dd>香港經濟</dd>
-                                    <dd>天氣</dd>
-                                </dl>
-                                <dl>
-                                    <dt>港聞</dt>
-                                    <dd>社會新聞</dd>
-                                    <dd>突發</dd>
-                                    <dd>01偵察</dd>
-                                    <dd>政情</dd>
-                                    <dd>香港經濟</dd>
-                                    <dd>天氣</dd>
-                                </dl>
-                                <dl>
-                                    <dt>港聞</dt>
-                                    <dd>社會新聞</dd>
-                                    <dd>突發</dd>
-                                    <dd>01偵察</dd>
-                                    <dd>政情</dd>
-                                    <dd>香港經濟</dd>
-                                    <dd>天氣</dd>
-                                </dl>
-                                <dl>
-                                    <dt>港聞</dt>
-                                    <dd>社會新聞</dd>
-                                    <dd>突發</dd>
-                                    <dd>01偵察</dd>
-                                    <dd>政情</dd>
-                                    <dd>香港經濟</dd>
-                                    <dd>天氣</dd>
-                                </dl>
-                                <dl>
-                                    <dt>港聞</dt>
-                                    <dd>社會新聞</dd>
-                                    <dd>突發</dd>
-                                    <dd>01偵察</dd>
-                                    <dd>政情</dd>
-                                    <dd>香港經濟</dd>
-                                    <dd>天氣</dd>
-                                </dl>
-                                <dl>
-                                    <dt>港聞</dt>
-                                    <dd>社會新聞</dd>
-                                    <dd>突發</dd>
-                                    <dd>01偵察</dd>
-                                    <dd>政情</dd>
-                                    <dd>香港經濟</dd>
-                                    <dd>天氣</dd>
-                                </dl>
-                                <dl>
-                                    <dt>港聞</dt>
-                                    <dd>社會新聞</dd>
-                                    <dd>突發</dd>
-                                    <dd>01偵察</dd>
-                                    <dd>政情</dd>
-                                    <dd>香港經濟</dd>
-                                    <dd>天氣</dd>
-                                </dl>
-                                <dl>
-                                    <dt>港聞</dt>
-                                    <dd>社會新聞</dd>
-                                    <dd>突發</dd>
-                                    <dd>01偵察</dd>
-                                    <dd>政情</dd>
-                                    <dd>香港經濟</dd>
-                                    <dd>天氣</dd>
-                                </dl>
-                                <dl>
-                                    <dt>港聞</dt>
-                                    <dd>社會新聞</dd>
-                                    <dd>突發</dd>
-                                    <dd>01偵察</dd>
-                                    <dd>政情</dd>
-                                    <dd>香港經濟</dd>
-                                    <dd>天氣</dd>
-                                </dl>
+                                {this.getSubclassItem(titles)}
                             </div>
                         </MoreContent>
                         <MoreFooter>
@@ -202,6 +92,41 @@ class Header extends Component {
         )
     }
 
+    componentDidMount() {
+        this.props.handleTitlesInfo()
+    }
+
+    getSubclassItem(titles) {
+        let lists = []
+        if (titles.length > 0) {
+            lists = titles.map(item => {
+                return (
+                    <dl key={item.id}>
+                        <dt><Link to={'/channel/' + item.id}>{item.title}</Link></dt>
+                        {
+                            item.list.map(k => {
+                                return (
+                                    <dd key={k.subclass}><Link to={'/channel/' + item.id+ '/' + k.channel}>{k.subclass}</Link></dd>
+                                )
+                            })
+                        }
+                    </dl>
+                )
+            })
+        } 
+        return lists
+    }
+
+    getHeaderTitle(titles) {
+        let subjects = []
+        if (titles.length > 0) {
+            for (let i = 0; i < 13; i++) {
+                subjects.push(<li key={titles[i]['id']}><Link to={'/channel/' + titles[i]['id']} >{titles[i]['title']}</Link></li>)
+            }
+        }
+        return subjects
+    }
+
     getSearchBox(showFlag, handleBoxDisplay) {
         if (showFlag) {
             return (
@@ -233,7 +158,8 @@ class Header extends Component {
 const mapState = state => {
     return {
         showMore: state.getIn(['header', 'showMore']),
-        showSearchBox: state.getIn(['header', 'showSearchBox'])
+        showSearchBox: state.getIn(['header', 'showSearchBox']),
+        titles: state.getIn(['header', 'titles']).toJS()
     }
 }
 
@@ -244,6 +170,9 @@ const mapDispatch = dispatch => {
         },
         handleBoxDisplay(flag) {
             dispatch(actionCreator.getSearchBoxAction(flag ? flag : ''))
+        },
+        handleTitlesInfo() {
+            dispatch(actionCreator.getTitlesInfo())
         }
     }
 }

@@ -3,7 +3,8 @@ import * as constants from './constants'
 
 const defaultState = fromJS({
     showMore: false,
-    showSearchBox: false
+    showSearchBox: false,
+    titles: []
 })
 
 const changeShowMore = (state, action) => {
@@ -24,12 +25,18 @@ const changeSearchBox = (state, action) => {
     }
 }
 
+const changeHeaderInfo = (state, action) => {
+    return state.set('titles', fromJS(action.data))
+}
+
 function Reducer(state = defaultState, action) {
     switch (action.type) {
-        case constants.CHANGE_SHOW_MORE_DISPLAY: 
+        case constants.CHANGE_SHOW_MORE_DISPLAY : 
             return changeShowMore(state, action);
-        case constants.CHANGE_SEARCH_BOX_DISPLAY:
-            return changeSearchBox(state,action)
+        case constants.CHANGE_SEARCH_BOX_DISPLAY :
+            return changeSearchBox(state,action);
+        case constants.CHANGE_HEADER_TITLE_DATA: 
+            return changeHeaderInfo(state, action);
         default: 
             return state
     }

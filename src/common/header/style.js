@@ -103,13 +103,17 @@ export const MoreContent = styled.div`
         overflow: hidden;
         dl {
             float: left;
-            margin-right: 90px;
+            margin-right: 80px;
             margin-bottom: 40px;
+            min-height: 210px;
             color: #383838;
             dt {
                 margin-bottom: 12px;
-                color: #0033E8;
                 cursor: pointer;
+                a {
+                    display: inline-block;
+                    color: #0033E8;
+                }
             }
             dd {
                 margin: 4px 0;
