@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 export const CarouselWrapper = styled.div`
-    margin-bottom: 24px;
     padding-top: 24px;
     padding-bottom: 12px;
     background: #f4f4f9;
