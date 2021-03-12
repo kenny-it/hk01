@@ -1,7 +1,9 @@
 import React, { Fragment } from 'react'
 import Header from './common/header'
+import Footer from './common/footer'
 import { Switch, Route } from 'react-router-dom'
 import Home from './pages/home'
+
 
 function App() {
   return (
@@ -11,6 +13,7 @@ function App() {
             <Route path="/" component={Home}>
             </Route>
         </Switch>
+        <Footer />
     </Fragment>
   );
 }
