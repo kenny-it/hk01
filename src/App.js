@@ -10,7 +10,7 @@ function App() {
     <Fragment>
         <Header />
         <Switch>
-            <Route path="/" component={Home}>
+            <Route path="/" exact component={Home}>
             </Route>
         </Switch>
         <Footer />

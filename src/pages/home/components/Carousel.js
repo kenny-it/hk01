@@ -10,7 +10,6 @@ import {
     SwiperBoxTop,
     SwiperBoxBottom
 } from './style'
-import { connect } from 'react-redux';
 
 SwiperCore.use([Navigation])
 
@@ -22,6 +21,8 @@ const slideConfig = {
     loop: true,
     speed: 800,
     autoplay: {delay: 6000},
+    observer:true,
+    observeParents:true,
     onSlideChange: swiper => {
         if (swiperVertical) {
             swiperVertical.slideTo(swiper.activeIndex - 1, 800)
@@ -35,6 +36,8 @@ const slideLeftConfig = {
     slidesPerView: 3,
     speed: 800,
     loop: true,
+    observer:true,
+    observeParents:true,
     onInit: swiper => {
         swiperVertical = swiper;
     }
@@ -43,19 +46,19 @@ const slideLeftConfig = {
 const slideSuggestConfig = {
     spaceBetween: 10,
     slidesPerView: 4,
-    loop: true,
     speed: 800,
-    autoplay: {delay: 6000}
+    observer:true,
+    observeParents:true,
 }
 
 class Casousel extends Component {
 
     getSwiperLeft() {
-        const { swiperList } = this.props
+        const { carousels } = this.props
         return (
-            swiperList.map(item => {
+            carousels.map(item => {
                 return (
-                    <SwiperSlide key={item.id}>
+                    <SwiperSlide key={item.channel}>
                         <Link to="/">
                             <div className="slide-box">
                                 <div className="slide-mask">
@@ -65,14 +68,14 @@ class Casousel extends Component {
                                             {
                                                 item.selective ? <span >精选</span> : ''
                                             }
-                                            {item.time}
+                                            {item.subclass + "  " +item.date}
                                         </div>
                                         <div>
                                             <i className="iconfont">&#xe83e;</i>
                                         </div>
                                     </div>
                                 </div>
-                                <img src={item.srcUrl} alt="" />
+                                <img src={item.imgUrl} alt="" />
                             </div>
                         </Link>
                     </SwiperSlide>
@@ -82,17 +85,17 @@ class Casousel extends Component {
     }
 
     getSwiperRight() {
-        const { swiperList } = this.props
+        const { carousels } = this.props
         return (
-            swiperList.map(item => {
+            carousels.map(item => {
                 return (
-                    <SwiperSlide key={item.id}>
+                    <SwiperSlide key={item.channel}>
                         <Link to="/">
                             <div className="slide-box">
                                 <div className="slide-mask">
                                     <p>{item.desc}</p>
                                 </div>
-                                <img src={item.srcUrl} alt="" />
+                                <img src={item.imgUrl} alt="" />
                             </div>
                         </Link>
                     </SwiperSlide>
@@ -122,11 +125,11 @@ class Casousel extends Component {
                             <div className="project-suggest">
                                 <Swiper {...slideSuggestConfig}>
                                     {
-                                        this.props.swiperList.map(item => {
+                                        this.props.promotions.map(item => {
                                             return (
                                                 <SwiperSlide key={item.id}>
                                                     <Link to="/">
-                                                        <img src={item.srcUrl} alt="" />
+                                                        <img src={item.imgUrl} alt="" />
                                                     </Link>
                                                 </SwiperSlide>
                                             )
@@ -141,10 +144,6 @@ class Casousel extends Component {
     }
 }
 
-const mapState = state => {
-    return {
-        swiperList: state.getIn(['home', 'swiperList']).toJS()
-    }
-}
+ 
 
-export default connect(mapState, null)(Casousel)
+export default Casousel

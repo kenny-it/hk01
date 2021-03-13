@@ -1,0 +1,80 @@
+{
+    "status": "success",
+    "data": {
+        "carousel": [
+            {
+                "id": "001",
+                "channel": "001",
+                "subclass": "社會新聞",
+                "imgUrl": "https://cdn.hk01.com/di/media/images/dw/20210313/447273603906408448098372.jpeg/AyGVSxLfDPPC0nniCwAP8PjCcbYRi6izpygGv6coBr8?v=w1920r16_9",
+                "date": "5 小時前",
+                "selective": true,
+                "desc": "啟歷薄扶林分校教師確診　9歲學生全班送檢疫14天　校方反對無效"
+            },
+            {
+                "id": "001",
+                "channel": "002",
+                "subclass": "社會新聞",
+                "imgUrl": "https://cdn.hk01.com/di/media/images/dw/20210312/447110241021071360952743.png/_6mXL-FFCUjrbfGHe2BRwULaSemxdvyY9bPrWvWz61o?v=w1600r16_9",
+                "date": "16 小時前",
+                "selective": false,
+                "desc": "【免費網上欣賞名作曲家萊哈爾成名作　輕歌劇經典《風流寡婦》】"
+            },
+            {
+                "id": "001",
+                "channel": "003",
+                "subclass": "實用教學",
+                "imgUrl": "https://cdn.hk01.com/di/media/images/dw/20210312/447035372375904256421893.jpeg/9C8NBD7cBHPzRxM4oDIiwwwEgxdc3KfUx7UseMe1LHg?v=w1120r16_9",
+                "date": "3 小時前",
+                "selective": true,
+                "desc": "消委會｜乾衣機10大使用貼士　6類衣物亂放入機　隨時縮水兼著火"
+            },
+            {
+                "id": "001",
+                "channel": "004",
+                "subclass": "社會新聞",
+                "imgUrl": "https://cdn.hk01.com/di/media/images/dw/20210109/424648161693274112521498.jpeg/HXquWOHFfeSt60nnlcBQsAHw4KVbC7l9H__D3iX_w94?v=w1600r16_9",
+                "date": "2 小時前",
+                "selective": true,
+                "desc": "新冠肺炎｜健身群組超級傳播　梁卓偉：中上環住宅污水陽性憂爆疫"
+            },
+            {
+                "id": "001",
+                "channel": "005",
+                "subclass": "社會新聞",
+                "imgUrl": "https://cdn.hk01.com/di/media/images/dw/20210306/444819083372793856194027.jpeg/phi5jeFRWXshoZJuCEmVjzhtG3OSHlWQ1qJO3POiTtw?v=w1120r16_9",
+                "date": "54 分鐘前",
+                "selective": false,
+                "desc": "泛民47人初選案｜譚文豪等擔保覆核今展開　鄭達鴻獲准保釋"
+            }
+        ],
+        "promotions": [{
+            "id": "011",
+            "imgUrl": "https://cdn.hk01.com/rcfg/images/items/thumbnails/75e2cf30-44d6-11ea-927a-37b68f5da405.jpeg?v=w960"
+        },{
+            "id": "012",
+            "imgUrl": "https://cdn.hk01.com/rcfg/images/items/thumbnails/1dde0ca1-98dc-11ea-8844-45b1a5f7b644.jpg?v=w1440"
+        },{
+            "id": "013",
+            "imgUrl": "https://cdn.hk01.com/rcfg/images/items/thumbnails/eb38fcee-9921-4ab1-acc5-b892d3549991.jpg?v=w1280"
+        },{
+            "id": "014",
+            "imgUrl": "https://cdn.hk01.com/rcfg/images/items/thumbnails/7e435628-b6d7-47e8-b536-270dea6ffe57.jpg?v=w1280"
+        },{
+            "id": "016",
+            "imgUrl": "https://cdn.hk01.com/rcfg/images/items/thumbnails/34b9d2f3-07f4-4566-9f28-ca31549bac4c.jpg?v=w960"
+        },{
+            "id": "017",
+            "imgUrl": "https://cdn.hk01.com/rcfg/images/items/thumbnails/33627f65-3628-4ee9-8849-fd19a1da0eab.png?v=w1280"
+        },{
+            "id": "018",
+            "imgUrl": "https://cdn.hk01.com/rcfg/images/items/thumbnails/541d5629-3b1e-4885-8803-f5f64c52d8c6.jpg?v=w1600"
+        },{
+            "id": "019",
+            "imgUrl": "https://cdn.hk01.com/rcfg/images/items/thumbnails/4773dfe8-eea3-4fa3-8440-fe66de6300f3.jpg?v=w960"
+        },{
+            "id": "020",
+            "imgUrl": "https://cdn.hk01.com/rcfg/images/items/thumbnails/16cd1188-1176-4f18-ab46-7ed09040427d.jpg?v=w1120"
+        }]
+    }
+}

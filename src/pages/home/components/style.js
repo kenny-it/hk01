@@ -94,7 +94,7 @@ export const SwiperBoxBottom = styled.div`
             width: 100%;
             height: 100%;
             .swiper-slide {
-                width: 100%;
+                max-width: 266px;
                 height: 100%;
                 img {
                     width: 100%;

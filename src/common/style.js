@@ -32,6 +32,7 @@ export const CaseDetail = styled.div`
     .case-desc {
         font-size: 18px;
         line-height: 1.5;
+        min-height: 54px;
     }
     .case-detail {
         margin-top: 10px;
@@ -39,7 +40,7 @@ export const CaseDetail = styled.div`
             float: left;
             font-size: 14px;
             color: #1a1e287a;
-            &:first-child {
+            &.case-selective {
                 color: #0060FF;
                 font-size: 10px;
                 margin: -2px 8px 0 0;
