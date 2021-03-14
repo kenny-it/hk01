@@ -10,7 +10,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
 
 ReactDOM.render(
-  <React.StrictMode>
+
     <Fragment>
       <GlobalStyle />
       <Iconfont />
@@ -26,8 +26,7 @@ ReactDOM.render(
           </Switch>
         </Provider>
       </BrowserRouter>
-    </Fragment>
-  </React.StrictMode>,
+    </Fragment>,
   document.getElementById('root')
 );
 
