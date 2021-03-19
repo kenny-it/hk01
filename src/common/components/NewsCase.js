@@ -11,7 +11,7 @@ function NewsCase(props) {
     return (
         <CaseWrapper width={width}>
             <CaseContainer>
-                <Link to="/">
+                <Link to="/detail/2">
                     <img src={imgUrl} alt="/"/>
                 </Link>
                 {

@@ -4,6 +4,9 @@ export const CarouselWrapper = styled.div`
     padding-top: 24px;
     padding-bottom: 12px;
     background: #f4f4f9;
+    @media (max-width: 768px) {
+        padding-top: 10px;
+    }
 `
 export const CarouselContent = styled.div`
     max-width: 1280px;
@@ -11,6 +14,7 @@ export const CarouselContent = styled.div`
 `
 export const SwiperBoxTop = styled.div`
    display: flex;
+   justify-content: center;
    height: 464px;
    .swiper-left {
        width: 826px;
@@ -83,13 +87,39 @@ export const SwiperBoxTop = styled.div`
            width: 100%;
        }
    }
+   @media (max-width: 1280px) {
+        height: auto;
+        .swiper-right {
+            display: none;
+        }
+        .swiper-left {
+            width: 96%;
+            .slide-box {
+                height: 100%;
+                .slide-mask {
+                    p {
+                        font-size: 16px;
+                        letter-spacing: unset;
+                    }
+                    .slide-desc {
+                        margin: 8px 0;
+                    }
+                }
+            }
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+   }
 `
 export const SwiperBoxBottom = styled.div`
-    margin: 30px 0;
+    margin: 30px auto;
+    width: 85.5%;
     font-size: 20px;
     .project-suggest {
         margin: 12px 0 0;
-        width: 85.5%;
+        width: 100%;
         .swiper-container {
             width: 100%;
             height: 100%;
@@ -101,5 +131,8 @@ export const SwiperBoxBottom = styled.div`
                 }
             }
         }
+    }
+    @media (max-width: 768px) {
+        width: 97%;
     }
 `

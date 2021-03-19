@@ -3,6 +3,9 @@ import styled from 'styled-components'
 export const DetailWrapper = styled.div`
     padding-top: 60px;
     width: 100%;
+    @media(max-width: 992px) {
+        padding-top: 30px;
+    }
 `
 export const DetailContainer = styled.div`
     max-width: 950px;
@@ -16,6 +19,12 @@ export const DetailContainer = styled.div`
         line-height: 1.3;
         letter-spacing: 4px;
     }
+    @media(max-width: 992px) {
+        .detail-title {
+            margin: 30px 0 24px;
+            padding: 0 10px;
+        }
+    }
 `
 export const DetailPicture = styled.div`
     img {
@@ -26,6 +35,10 @@ export const DetailMain = styled.div`
     max-width: 800px;
     width: 100%;
     margin: 0 auto;
+    @media(max-width: 992px) {
+        max-width: unset;
+        width: 96%;
+    }
 `
 export const DescribeBox = styled.div`
     padding: 26px 0;
@@ -98,6 +111,11 @@ export const ArticleWrapper = styled.div`
             font-size: 18px;
         }
     }
+    @media (max-width: 600px) {
+        .iframe-box {
+            width: 90% !important;
+        }
+    }
 `
 export const ArticleMain = styled.div`
     position: relative;
@@ -118,6 +136,9 @@ export const DetailCommand = styled.div`
     margin: 20px 0;
     max-width: 800px;
     margin: 0 auto;
+    @media (max-width: 992px) {
+        width: 96%;
+    }
 `
 export const CommandIcons = styled.div`
     margin: 50px 0 0;
@@ -133,6 +154,12 @@ export const CommandIcons = styled.div`
                 height: 28px;
                 margin-right: 7px;
             }
+        }
+    }
+    @media(max-width: 992px) {
+        ul {
+            justify-content: center;
+            align-items: center;
         }
     }
 `
@@ -182,6 +209,17 @@ export const CommandMain = styled.div`
             }
         }
     }
+    @media (max-width: 630px) {
+        &>div:nth-child(2) {
+            img {
+                width: 30px;
+                height: 30px;
+            }
+        }
+        div textarea {
+            height: 46px !important;
+        }
+    }
 `
 
 export const AsideNav = styled.div`
@@ -208,5 +246,23 @@ export const AsideNav = styled.div`
             font-size: 20px;
             color: rgb(60, 60, 60);
         }
+    }
+    @media (max-width: 1800px) {
+        &.aside-fixed {
+            left: 16%;
+        }
+    }
+    @media (max-width: 1400px) {
+        &.aside-fixed {
+            left: 10%;
+        }
+    }
+    @media (max-width: 1200px) {
+        &.aside-fixed {
+            left: 5%;
+        }
+    }
+    @media (max-width: 992px) {
+        display: none;
     }
 `

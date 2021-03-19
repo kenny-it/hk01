@@ -31,3 +31,10 @@ export const getTitlesInfo = () => {
         }
     }
 }
+
+export const getSwitchAction = flag => {
+    return {
+        type: constants.CHANGE_SWITCH_ICON_VALUE,
+        flag
+    }
+}

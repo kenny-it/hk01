@@ -13,6 +13,12 @@ export const FooterContainer = styled.div`
     box-sizing: border-box;
     min-width: 0px;
     font-size: 14px;
+    @media (max-width: 1280px) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 12px 10px;
+    }
 `
 export const LogoContent = styled.div`
     float: left;
@@ -21,6 +27,10 @@ export const LogoContent = styled.div`
         width: 48px;
         height: 48px;
         color: #fff;
+    }
+    @media (max-width: 992px) {
+        float: none;
+        text-align: center;
     }
 `
 export const AboutContent = styled.div`
@@ -32,6 +42,14 @@ export const AboutContent = styled.div`
         color: #fff;
         line-height: 48px;
    }
+   @media (max-width: 992px) {
+        margin-left: 0;
+        float: none;
+        text-align: center;
+        a {
+            display: inline-block;
+        }
+}
 `
 export const SocialContent = styled.div`
    display: flex;
@@ -46,5 +64,10 @@ export const SocialContent = styled.div`
    }
    span {
        margin-left: 12px;
+   }
+   @media (max-width: 992px) {
+       flex-direction: column;
+      justify-content: center;
+      align-items: center;
    }
 `

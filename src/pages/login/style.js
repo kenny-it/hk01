@@ -60,6 +60,9 @@ export const LoginBox = styled.div`
             }
         }
     }
+    @media (max-width: 500px) {
+        width: 80%;
+    }
 `
 export const SwitchLoginBox = styled.div`
     display: flex;

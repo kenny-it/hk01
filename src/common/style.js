@@ -6,6 +6,9 @@ export const CaseWrapper = styled.div`
     box-sizing: border-box;
     min-width: 0px;
     background: rgb(245, 246, 250);
+    @media (max-width: 992px) {
+        width: 96%;
+    }
 `
 
 export const CaseContainer = styled.div`
@@ -53,10 +56,24 @@ export const CaseDetail = styled.div`
             cursor: pointer;
         }
     }
+    @media (max-width: 1280px) {
+        .case-desc {
+            font-size: 16px;
+        }
+    }
+    @media (max-width: 992px) {
+        .case-desc {
+            line-height: 1.5;
+            min-height: 30px;
+        }
+    }
 `
 
 export const NewsContainer = styled.div`
     padding: 50px 0 30px;
+    @media (max-width: 1280px) {
+        padding: 10px 0;
+    }
 `
 
 export const NewsBox = styled.div`
@@ -66,6 +83,7 @@ export const NewsBox = styled.div`
     margin: 0 auto;
     min-width: 0px;
     width: 100%;
+    box-sizing: border-box;
 `
 
 export const NewsTitle = styled.div`

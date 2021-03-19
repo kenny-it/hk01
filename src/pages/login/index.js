@@ -20,7 +20,7 @@ class Login extends Component {
                     <div>
                         <div className="login-header">
                             <span>登入</span>
-                            <LoginImg alt="logo" src={SmallLogo}/>
+                            <LoginImg alt="logo" src={SmallLogo} onClick={()=>{window.location.href = '/'}} />
                         </div>
                         <p className="login-link">以連結至 HK01</p>
                         <SwitchLoginBox>

@@ -25,7 +25,7 @@ const slideConfig = {
     observeParents:true,
     onSlideChange: swiper => {
         if (swiperVertical) {
-            swiperVertical.slideTo(swiper.activeIndex - 1, 800)
+            swiperVertical.slideTo(swiper.activeIndex - 0 + 2, 800)
         }
     }
 }
@@ -59,7 +59,7 @@ class Casousel extends Component {
             carousels.map(item => {
                 return (
                     <SwiperSlide key={item.channel}>
-                        <Link to="/">
+                        <Link to="/detail/1">
                             <div className="slide-box">
                                 <div className="slide-mask">
                                     <p>{item.desc}</p>
@@ -90,7 +90,7 @@ class Casousel extends Component {
             carousels.map(item => {
                 return (
                     <SwiperSlide key={item.channel}>
-                        <Link to="/">
+                        <Link to="/detail/123">
                             <div className="slide-box">
                                 <div className="slide-mask">
                                     <p>{item.desc}</p>
@@ -128,7 +128,7 @@ class Casousel extends Component {
                                         this.props.promotions.map(item => {
                                             return (
                                                 <SwiperSlide key={item.id}>
-                                                    <Link to="/">
+                                                    <Link to="/detail/123">
                                                         <img src={item.imgUrl} alt="" />
                                                     </Link>
                                                 </SwiperSlide>
