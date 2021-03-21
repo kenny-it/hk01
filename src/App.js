@@ -13,6 +13,7 @@ function App() {
         <Switch>
             <Route path="/" exact component={Home}></Route>
             <Route path="/detail/:id"  component={Detail}></Route>
+            <Route path="/channel"  component={Detail}></Route>
         </Switch>
         <Footer />
     </Fragment>

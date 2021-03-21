@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import SwiperCore, { Navigation } from 'swiper'
+import SwiperCore, { Navigation, Autoplay } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/swiper.scss'
 import 'swiper/components/navigation/navigation.scss';
@@ -11,42 +11,35 @@ import {
     SwiperBoxBottom
 } from './style'
 
-SwiperCore.use([Navigation])
+SwiperCore.use([Navigation, Autoplay])
 
-let swiperVertical = null;
 
 const slideConfig = {
     spaceBetween: 0,
     slidesPerView: 1,
     loop: true,
     speed: 800,
-    autoplay: {delay: 6000},
+    autoplay: {delay: 2000},
     observer:true,
-    observeParents:true,
-    onSlideChange: swiper => {
-        if (swiperVertical) {
-            swiperVertical.slideTo(swiper.activeIndex - 0 + 2, 800)
-        }
-    }
+    observeParents:true
 }
 
 const slideLeftConfig = {
     spaceBetween: 10,
     direction: "vertical",
     slidesPerView: 3,
+    autoplay: {delay: 2000},
     speed: 800,
     loop: true,
     observer:true,
-    observeParents:true,
-    onInit: swiper => {
-        swiperVertical = swiper;
-    }
+    observeParents:true
 }
 
 const slideSuggestConfig = {
     spaceBetween: 10,
     slidesPerView: 4,
     speed: 800,
+    autoplay: {delay: 2000},
     observer:true,
     observeParents:true,
 }
